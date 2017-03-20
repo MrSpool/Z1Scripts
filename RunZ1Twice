@@ -1,0 +1,14 @@
+Sub RunApplication(ByVal sFile)
+ 
+ 
+   Dim WShell : Set WShell = CreateObject("WScript.Shell")
+   WShell.Run Chr(34) & sFile & Chr(34), 8, false
+
+
+End Sub 'Executing apps.
+
+RunApplication "C:\Program Files\my folder\z1server.exe" 
+WScript.Sleep 500
+RunApplication "C:\Program Files\my folder\z1dashboard.exe"
+WScript.Sleep 1000
+RunApplication "C:\Program Files\my folder\z1dashboard.exe"
